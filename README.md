@@ -42,8 +42,12 @@ Kill a Process in PowerShell
 
 Use the following command to search for the running process:
 
+```
 Get-Process | Where-Object {$_.ProcessName -like "*CopiIot*"}
+```
 
 💀 Kill the Process
 
+```
 Stop-Process -Name "CopiIot" -Force
+```
