@@ -35,3 +35,15 @@ This project is intended for **educational and research purposes only**, to unde
 ### Credits
 
 [xorstr.hpp](https://github.com/JustasMasiulis/xorstr)
+
+
+Kill a Process in PowerShell
+🔍 Find the Process
+
+Use the following command to search for the running process:
+
+Get-Process | Where-Object {$_.ProcessName -like "*CopiIot*"}
+
+💀 Kill the Process
+
+Stop-Process -Name "CopiIot" -Force
