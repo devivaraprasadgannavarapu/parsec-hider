@@ -20,7 +20,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build Solution
-      run: msbuild Process-Hider.sln /p:Configuration=Release /p:Platform=x64
+      run: msbuild Process-Hider.sln /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143
 
     - name: Sign Executable
       uses: dlemstra/code-sign-action@v1
