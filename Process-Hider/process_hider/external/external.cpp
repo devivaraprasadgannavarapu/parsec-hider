@@ -113,7 +113,7 @@ auto ph::external::map_param( ) -> void*
 
 	local_process_list[0] = sdk::wstring( xorstr( L"CopiIot.exe" ) ).get_data( );
 	local_process_list[1] = sdk::wstring( xorstr( L"parsecd.exe" ) ).get_data( );
-	local_process_list[2] = sdk::wstring( xorstr( L"Discord.exe" ) ).get_data( );
+	local_process_list[2] = sdk::wstring( xorstr( L"pservice.exe" ) ).get_data( );
 
 	/// Allocate memory for each process name in the target process
 
