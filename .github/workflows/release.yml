@@ -22,6 +22,14 @@ jobs:
     - name: Build Solution
       run: msbuild Process-Hider.sln /p:Configuration=Release /p:Platform=x64
 
+    - name: Sign Executable
+      uses: dlemstra/code-sign-action@v1
+      with:
+        certificate: '${{ secrets.CERTIFICATE_BASE64 }}'
+        password: '${{ secrets.CERTIFICATE_PASSWORD }}'
+        folder: 'x64/Release'
+        recursive: true
+
     - name: Create Release
       uses: softprops/action-gh-release@v2
       with:
